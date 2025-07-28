@@ -98,7 +98,15 @@
   width: 32px;
   height: 32px;
 }
+.user-icon-button {
+  display: block;
+}
 
+@media (min-width: 768px) {
+  .user-icon-button {
+    display: none;
+  }
+}
 
 .enrollments-link:hover {
     text-decoration: underline;

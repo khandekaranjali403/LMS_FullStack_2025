@@ -10,6 +10,7 @@ const Navbar = () => {
 
 
     const { openSignIn } = useClerk()
+    // const { openSignIn } = useClerk()
 
     const { user } = useUser()
     return (
@@ -23,9 +24,6 @@ const Navbar = () => {
                 <button>Become Educator</button> |
                 <Link to='/my-enrollments'>My Enrollments</Link>
             </div> */}
-
-
-
 
             <div className="navbar-links">
                 {user &&
@@ -45,23 +43,25 @@ const Navbar = () => {
                 <div className='flex items-center gap-1 sm:gap-2 max-sm:text-xs'>
                 </div>
 
-                {
+                {/* {
                     user &&
                     <>
                         <Link to="/educator" className="educator-link">Become Educator</Link>
                         <span className="separator">|</span>
                         <Link to="/my-enrollments" className="enrollments-link">My Enrollments</Link>
                     </>
-                }
+                } */}
 
-                {
-                    user ? <UserButton />
-                        :
-                        <button onClick={() => openSignIn()} className="user-icon-button">
-                            <img src={assets.user_icon} alt="User Icon" />
-                        </button>
+                {user ? (
+                    <div className="block md:hidden">
+                        <UserButton />
+                    </div>
+                ) : (
+                    <button onClick={openSignIn} className="user-icon-button block md:hidden">
+                        <img src={assets.user_icon} alt="User Icon" />
+                    </button>
+                )}
 
-                }
             </div>
         </div>
 

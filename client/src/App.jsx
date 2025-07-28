@@ -40,6 +40,7 @@ const isEducatorRoute = useMatch('/educator/*');
 
         </Route>
       </Routes>
+      
 
     </div>
   );
