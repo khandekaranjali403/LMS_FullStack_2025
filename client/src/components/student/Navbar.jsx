@@ -57,7 +57,6 @@ const Navbar = () => {
                 {
                     user ? <UserButton />
                         :
-
                         <button onClick={() => openSignIn()} className="user-icon-button">
                             <img src={assets.user_icon} alt="User Icon" />
                         </button>
