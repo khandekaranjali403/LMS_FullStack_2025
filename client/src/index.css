@@ -11,50 +11,107 @@
 {
   font-family:Outfit;
 }
-/* Header container */
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2.5rem;
-  background-color: rgba(207, 250, 254, 0.7); /* light cyan background */
-  border-bottom: 1px solid #6b7280; /* gray-500 */
+    background-color: #e0f7fa; /* Light blue background */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
 }
 
-/* Logo styling */
 .logo {
-  display: flex;
-  align-items: center;
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #000;
+    display: flex;
+    align-items: center;
 }
 
 .logo img {
-  width: 8rem;
-  margin-right: 0.5rem;
+    width: 30px;
+    height: 30px;
 }
 
-/* Navigation links */
-.nav-links {
-  display: none;
-  align-items: center;
-  gap: 1.25rem;
-  color: #6b7280; /* gray-500 */
+.logo-text {
+    font-size: 24px;
+    color: #000000; /* Black text */
+    margin-left: 10px;
 }
 
-@media (min-width: 768px) {
-  .nav-links {
-    display: flex;
-  }
-}
-
-/* Create Account button */
 .create-account-btn {
-  background-color: #eb2528; /* blue-600 */
-  color: white;
-  padding: 0.5rem 1.25rem;
-  border-radius: 9999px;
+    background-color: #1e88e5; /* Blue button */
+    color: #ffffff; /* White text */
+    border-radius: 20px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.create-account-btn:hover {
+    background-color: #1565c0; /* Darker blue on hover */
+}
+.navbar-links {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    margin-left: auto; /* Push links to the right */
+    gap: 20px; /* Adds space between items */
+}
+
+.educator-button {
+    
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.user-icon {
+    position: absolute;
+    right: 20px; /* Adjust as needed */
+    top: 10px;   /* Optional: adjust vertical position */
+    width: 32px; /* Adjust size as needed */
+    height: 32px;
+}
+
+
+.separator {
+    color: #888;
+    font-weight: bold;
+    gap: 5px;
+}
+
+.enrollments-link {
+    color: #1e88e5;
+    text-decoration: none;
+    font-weight: 500;
+    margin-right: 20px; 
+    
+}
+.user-icon-button {
+  background: none;
   border: none;
   cursor: pointer;
+  padding: 0;
+  margin-left: auto; /* Pushes it to the right in a flex container */
 }
+
+.user-icon-button img {
+  width: 32px;
+  height: 32px;
+}
+
+
+.enrollments-link:hover {
+    text-decoration: underline;
+}
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+
